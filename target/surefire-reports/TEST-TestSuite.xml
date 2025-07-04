@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="1.292" tests="6" errors="0" skipped="0" failures="4">
+  <properties>
+    <property name="cucumber.feature.tags" value="@ADDPRODUCT"/>
+    <property name="java.specification.version" value="24"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\skomaragiri\eclipse-workspace\saucedemo\target\test-classes;C:\Users\skomaragiri\eclipse-workspace\saucedemo\target\classes;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-java\7.23.0\cucumber-java-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-core\7.23.0\cucumber-core-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-gherkin\7.23.0\cucumber-gherkin-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.23.0\cucumber-gherkin-messages-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\query\13.3.0\query-13.3.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\datatable\7.23.0\datatable-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-plugin\7.23.0\cucumber-plugin-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\docstring\7.23.0\docstring-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\skomaragiri\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-picocontainer\7.23.0\cucumber-picocontainer-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\org\picocontainer\picocontainer\2.15.2\picocontainer-2.15.2.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-java\4.33.0\selenium-java-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-api\4.33.0\selenium-api-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.33.0\selenium-chrome-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.33.0\selenium-chromium-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-json\4.33.0\selenium-json-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.33.0\selenium-manager-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.33.0\selenium-devtools-v135-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.33.0\selenium-devtools-v136-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.33.0\selenium-devtools-v137-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.33.0\selenium-edge-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.33.0\selenium-firefox-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-http\4.33.0\selenium-http-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.33.0\selenium-ie-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.33.0\selenium-remote-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\skomaragiri\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\skomaragiri\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\skomaragiri\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\skomaragiri\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-api\1.50.0\opentelemetry-api-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-context\1.50.0\opentelemetry-context-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.50.0\opentelemetry-exporter-logging-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.50.0\opentelemetry-sdk-common-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.50.0\opentelemetry-sdk-extension-autoconfigure-spi-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.50.0\opentelemetry-sdk-extension-autoconfigure-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.50.0\opentelemetry-sdk-trace-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.50.0\opentelemetry-sdk-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.50.0\opentelemetry-sdk-metrics-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.50.0\opentelemetry-sdk-logs-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-os\4.33.0\selenium-os-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.33.0\selenium-safari-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-support\4.33.0\selenium-support-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-testng\7.23.0\cucumber-testng-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\skomaragiri\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\skomaragiri\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\skomaragiri\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\skomaragiri\.m2\repository\org\slf4j\slf4j-simple\2.0.16\slf4j-simple-2.0.16.jar;C:\Users\skomaragiri\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;C:\Users\skomaragiri\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\skomaragiri\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\skomaragiri\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\skomaragiri\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\skomaragiri\.m2\repository\org\projectlombok\lombok\1.18.12\lombok-1.18.12.jar;C:\Users\skomaragiri\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.14.0\extentreports-cucumber7-adapter-1.14.0.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\skomaragiri\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\skomaragiri\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\skomaragiri\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\skomaragiri\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\skomaragiri\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\skomaragiri\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\skomaragiri\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\skomaragiri\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\skomaragiri\.m2\repository\com\aventstack\klov-reporter\5.1.0\klov-reporter-5.1.0.jar;C:\Users\skomaragiri\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\skomaragiri\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\skomaragiri\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\skomaragiri\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\skomaragiri\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\skomaragiri\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\skomaragiri\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\skomaragiri\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\htmlextentreporter\1.1.0\htmlextentreporter-1.1.0.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\extent-excel-report\1.4.0\extent-excel-report-1.4.0.jar;C:\Users\skomaragiri\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar;C:\Users\skomaragiri\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\skomaragiri\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\skomaragiri\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\skomaragiri\.m2\repository\org\apache\logging\log4j\log4j-api\2.18.0\log4j-api-2.18.0.jar;C:\Users\skomaragiri\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar;C:\Users\skomaragiri\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar;C:\Users\skomaragiri\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar;C:\Users\skomaragiri\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\skomaragiri\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;C:\Users\skomaragiri\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.0\jackson-databind-2.19.0.jar;C:\Users\skomaragiri\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.0\jackson-annotations-2.19.0.jar;C:\Users\skomaragiri\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.0\jackson-core-2.19.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="24"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
+    <property name="sun.java.command" value="C:\Users\skomaragiri\AppData\Local\Temp\surefire14624834429286432538\surefirebooter-20250704112726504_3.jar C:\Users\skomaragiri\AppData\Local\Temp\surefire14624834429286432538 2025-07-04T11-27-25_405-jvmRun1 surefire-20250704112726504_1tmp surefire_0-20250704112726504_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\skomaragiri\eclipse-workspace\saucedemo\target\test-classes;C:\Users\skomaragiri\eclipse-workspace\saucedemo\target\classes;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-java\7.23.0\cucumber-java-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-core\7.23.0\cucumber-core-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-gherkin\7.23.0\cucumber-gherkin-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-gherkin-messages\7.23.0\cucumber-gherkin-messages-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\gherkin\32.1.1\gherkin-32.1.1.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\messages\27.2.0\messages-27.2.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\testng-xml-formatter\0.3.1\testng-xml-formatter-0.3.1.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\query\13.3.0\query-13.3.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\tag-expressions\6.1.2\tag-expressions-6.1.2.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-expressions\18.0.1\cucumber-expressions-18.0.1.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\datatable\7.23.0\datatable-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-plugin\7.23.0\cucumber-plugin-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\docstring\7.23.0\docstring-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\html-formatter\21.10.1\html-formatter-21.10.1.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\junit-xml-formatter\0.7.1\junit-xml-formatter-0.7.1.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\ci-environment\10.0.1\ci-environment-10.0.1.jar;C:\Users\skomaragiri\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-picocontainer\7.23.0\cucumber-picocontainer-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\org\picocontainer\picocontainer\2.15.2\picocontainer-2.15.2.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-java\4.33.0\selenium-java-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-api\4.33.0\selenium-api-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.33.0\selenium-chrome-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\com\google\auto\service\auto-service-annotations\1.1.1\auto-service-annotations-1.1.1.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.33.0\selenium-chromium-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-json\4.33.0\selenium-json-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-manager\4.33.0\selenium-manager-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v135\4.33.0\selenium-devtools-v135-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v136\4.33.0\selenium-devtools-v136-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v137\4.33.0\selenium-devtools-v137-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.33.0\selenium-edge-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.33.0\selenium-firefox-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-http\4.33.0\selenium-http-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.33.0\selenium-ie-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.33.0\selenium-remote-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\com\google\guava\guava\33.4.8-jre\guava-33.4.8-jre.jar;C:\Users\skomaragiri\.m2\repository\com\google\guava\failureaccess\1.0.3\failureaccess-1.0.3.jar;C:\Users\skomaragiri\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\skomaragiri\.m2\repository\com\google\errorprone\error_prone_annotations\2.36.0\error_prone_annotations-2.36.0.jar;C:\Users\skomaragiri\.m2\repository\com\google\j2objc\j2objc-annotations\3.0.0\j2objc-annotations-3.0.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-api\1.50.0\opentelemetry-api-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-context\1.50.0\opentelemetry-context-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.50.0\opentelemetry-exporter-logging-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.50.0\opentelemetry-sdk-common-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure-spi\1.50.0\opentelemetry-sdk-extension-autoconfigure-spi-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.50.0\opentelemetry-sdk-extension-autoconfigure-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.50.0\opentelemetry-sdk-trace-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.50.0\opentelemetry-sdk-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.50.0\opentelemetry-sdk-metrics-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\io\opentelemetry\opentelemetry-sdk-logs\1.50.0\opentelemetry-sdk-logs-1.50.0.jar;C:\Users\skomaragiri\.m2\repository\net\bytebuddy\byte-buddy\1.17.5\byte-buddy-1.17.5.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-os\4.33.0\selenium-os-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\apache\commons\commons-exec\1.4.0\commons-exec-1.4.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.33.0\selenium-safari-driver-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\org\seleniumhq\selenium\selenium-support\4.33.0\selenium-support-4.33.0.jar;C:\Users\skomaragiri\.m2\repository\io\cucumber\cucumber-testng\7.23.0\cucumber-testng-7.23.0.jar;C:\Users\skomaragiri\.m2\repository\org\testng\testng\7.10.2\testng-7.10.2.jar;C:\Users\skomaragiri\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\skomaragiri\.m2\repository\com\beust\jcommander\1.82\jcommander-1.82.jar;C:\Users\skomaragiri\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;C:\Users\skomaragiri\.m2\repository\org\slf4j\slf4j-simple\2.0.16\slf4j-simple-2.0.16.jar;C:\Users\skomaragiri\.m2\repository\commons-io\commons-io\2.18.0\commons-io-2.18.0.jar;C:\Users\skomaragiri\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\skomaragiri\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\skomaragiri\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\skomaragiri\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\skomaragiri\.m2\repository\org\projectlombok\lombok\1.18.12\lombok-1.18.12.jar;C:\Users\skomaragiri\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\extentreports-cucumber7-adapter\1.14.0\extentreports-cucumber7-adapter-1.14.0.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\extent-pdf-report\2.12.0\extent-pdf-report-2.12.0.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\cucumber-pdf-report\2.14.0\cucumber-pdf-report-2.14.0.jar;C:\Users\skomaragiri\.m2\repository\org\apache\pdfbox\pdfbox\2.0.26\pdfbox-2.0.26.jar;C:\Users\skomaragiri\.m2\repository\org\apache\pdfbox\fontbox\2.0.26\fontbox-2.0.26.jar;C:\Users\skomaragiri\.m2\repository\org\knowm\xchart\xchart\3.8.0\xchart-3.8.0.jar;C:\Users\skomaragiri\.m2\repository\de\erichseifert\vectorgraphics2d\VectorGraphics2D\0.13\VectorGraphics2D-0.13.jar;C:\Users\skomaragiri\.m2\repository\de\rototor\pdfbox\graphics2d\0.30\graphics2d-0.30.jar;C:\Users\skomaragiri\.m2\repository\com\madgag\animated-gif-lib\1.4\animated-gif-lib-1.4.jar;C:\Users\skomaragiri\.m2\repository\org\yaml\snakeyaml\2.0\snakeyaml-2.0.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\table-layout\1.5.1\table-layout-1.5.1.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\rest-assured-cucumber-pdf-report\1.5.0\rest-assured-cucumber-pdf-report-1.5.0.jar;C:\Users\skomaragiri\.m2\repository\org\jsoup\jsoup\1.15.3\jsoup-1.15.3.jar;C:\Users\skomaragiri\.m2\repository\com\aventstack\klov-reporter\5.1.0\klov-reporter-5.1.0.jar;C:\Users\skomaragiri\.m2\repository\org\mongodb\mongodb-driver\3.6.4\mongodb-driver-3.6.4.jar;C:\Users\skomaragiri\.m2\repository\org\mongodb\mongodb-driver-core\3.6.4\mongodb-driver-core-3.6.4.jar;C:\Users\skomaragiri\.m2\repository\org\mongodb\bson\3.6.4\bson-3.6.4.jar;C:\Users\skomaragiri\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\skomaragiri\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\skomaragiri\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\skomaragiri\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\skomaragiri\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\htmlextentreporter\1.1.0\htmlextentreporter-1.1.0.jar;C:\Users\skomaragiri\.m2\repository\tech\grasshopper\extent-excel-report\1.4.0\extent-excel-report-1.4.0.jar;C:\Users\skomaragiri\.m2\repository\org\apache\poi\poi\5.2.3\poi-5.2.3.jar;C:\Users\skomaragiri\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\skomaragiri\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\skomaragiri\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\skomaragiri\.m2\repository\org\apache\logging\log4j\log4j-api\2.18.0\log4j-api-2.18.0.jar;C:\Users\skomaragiri\.m2\repository\org\apache\poi\poi-ooxml\5.2.3\poi-ooxml-5.2.3.jar;C:\Users\skomaragiri\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.3\poi-ooxml-lite-5.2.3.jar;C:\Users\skomaragiri\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar;C:\Users\skomaragiri\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\skomaragiri\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;C:\Users\skomaragiri\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.0\jackson-databind-2.19.0.jar;C:\Users\skomaragiri\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.0\jackson-annotations-2.19.0.jar;C:\Users\skomaragiri\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.0\jackson-core-2.19.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\skomaragiri"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-24"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\skomaragiri\eclipse-workspace\saucedemo"/>
+    <property name="style.color" value="always"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\skomaragiri\AppData\Local\Temp\surefire14624834429286432538\surefirebooter-20250704112726504_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="24.0.1+9-30"/>
+    <property name="user.name" value="skomaragiri"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\skomaragiri\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\SKOMAR~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="24.0.1"/>
+    <property name="cucumber.filter.tags" value="@LOGIN"/>
+    <property name="user.dir" value="C:\Users\skomaragiri\eclipse-workspace\saucedemo"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-24\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529/jre/bin/server;C:/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_21.0.6.v20250130-0529/jre/bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\skomaragiri\AppData\Local\Microsoft\WindowsApps;;C:\eclipse;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="24.0.1+9-30"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="68.0"/>
+  </properties>
+  <testcase name="runScenario[&quot;&quot;, &quot;Login to the Account&quot;](1)" classname="TestRunner.TestRunner" time="0.169">
+    <failure message="The step &apos;Log in to the Website.&apos; and 2 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@Given(&quot;Log in to the Website.&quot;)&#10;public void log_in_to_the_website() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;Enter valid {string} and {string}&quot;)&#10;public void enter_valid_and(String string, String string2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Click on login.&quot;)&#10;public void click_on_login() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.testng.UndefinedStepException"><![CDATA[io.cucumber.testng.UndefinedStepException: 
+The step 'Log in to the Website.' and 2 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("Log in to the Website.")
+public void log_in_to_the_website() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("Enter valid {string} and {string}")
+public void enter_valid_and(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Click on login.")
+public void click_on_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Log in to the Website.(file:///C:/Users/skomaragiri/eclipse-workspace/saucedemo/src/test/java/Feature/TC001_Login.feature:6)
+]]></failure>
+    <system-out><![CDATA[
+@LOGIN
+Scenario Outline:                                     # src/test/java/Feature/TC001_Login.feature:12
+  Given Log in to the Website.
+  When Enter valid "standard_user" and "secret_sauce"
+  Then Click on login.
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="runScenario[&quot;Add products into Addcart.&quot;, &quot;User can able to add his selcted products into the cart.&quot;](2)" classname="TestRunner.TestRunner" time="0.008">
+    <failure message="The step &apos;Enter valid &quot;standard_user&quot; and &quot;secret_sauce&quot;&apos; and 5 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@When(&quot;Enter valid {string} and {string}&quot;)&#10;public void enter_valid_and(String string, String string2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Click on login.&quot;)&#10;public void click_on_login() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Given(&quot;User should succesfully navigated to the products page.&quot;)&#10;public void user_should_succesfully_navigated_to_the_products_page() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User selcted t-shirt&quot;)&#10;public void user_selcted_t_shirt() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User selected bag&quot;)&#10;public void user_selected_bag() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;products sucessfully added into the cart&quot;)&#10;public void products_sucessfully_added_into_the_cart() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.testng.UndefinedStepException"><![CDATA[io.cucumber.testng.UndefinedStepException: 
+The step 'Enter valid "standard_user" and "secret_sauce"' and 5 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("Enter valid {string} and {string}")
+public void enter_valid_and(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Click on login.")
+public void click_on_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User should succesfully navigated to the products page.")
+public void user_should_succesfully_navigated_to_the_products_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User selcted t-shirt")
+public void user_selcted_t_shirt() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User selected bag")
+public void user_selected_bag() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("products sucessfully added into the cart")
+public void products_sucessfully_added_into_the_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Enter valid "standard_user" and "secret_sauce"(file:///C:/Users/skomaragiri/eclipse-workspace/saucedemo/src/test/java/Feature/TC002_Addproductsintocart.feature:7)
+]]></failure>
+    <system-out><![CDATA[
+@ADDPRODUCT
+Scenario: Add products into Addcart.                            # src/test/java/Feature/TC002_Addproductsintocart.feature:11
+  When Enter valid "standard_user" and "secret_sauce"
+  Then Click on login.
+  Given User should succesfully navigated to the products page.
+  When User selcted t-shirt
+  And User selected bag
+  Then products sucessfully added into the cart
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;Go to Cart page and remove one product.&quot;, &quot;Verify the acrt page and Remove the product&quot;](3)" classname="TestRunner.TestRunner" time="0.01">
+    <failure message="The step &apos;Enter valid &quot;standard_user&quot; and &quot;secret_sauce&quot;&apos; and 7 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@When(&quot;Enter valid {string} and {string}&quot;)&#10;public void enter_valid_and(String string, String string2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Click on login.&quot;)&#10;public void click_on_login() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User selcted t-shirt&quot;)&#10;public void user_selcted_t_shirt() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User selected bag&quot;)&#10;public void user_selected_bag() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;products sucessfully added into the cart&quot;)&#10;public void products_sucessfully_added_into_the_cart() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Given(&quot;user navigated to the cart page&quot;)&#10;public void user_navigated_to_the_cart_page() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User removed one of the Added Product&quot;)&#10;public void user_removed_one_of_the_added_product() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Product was successfully removed&quot;)&#10;public void product_was_successfully_removed() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.testng.UndefinedStepException"><![CDATA[io.cucumber.testng.UndefinedStepException: 
+The step 'Enter valid "standard_user" and "secret_sauce"' and 7 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("Enter valid {string} and {string}")
+public void enter_valid_and(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Click on login.")
+public void click_on_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User selcted t-shirt")
+public void user_selcted_t_shirt() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User selected bag")
+public void user_selected_bag() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("products sucessfully added into the cart")
+public void products_sucessfully_added_into_the_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("user navigated to the cart page")
+public void user_navigated_to_the_cart_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User removed one of the Added Product")
+public void user_removed_one_of_the_added_product() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Product was successfully removed")
+public void product_was_successfully_removed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Enter valid "standard_user" and "secret_sauce"(file:///C:/Users/skomaragiri/eclipse-workspace/saucedemo/src/test/java/Feature/TC003_Cart_page_remove_product.feature:6)
+]]></failure>
+    <system-out><![CDATA[
+@CART_PAGE_REMOVE_PRODUCT
+Scenario: Go to Cart page and remove one product.     # src/test/java/Feature/TC003_Cart_page_remove_product.feature:14
+  When Enter valid "standard_user" and "secret_sauce"
+  Then Click on login.
+  When User selcted t-shirt
+  And User selected bag
+  Then products sucessfully added into the cart
+  Given user navigated to the cart page
+  When User removed one of the Added Product
+  Then Product was successfully removed
+]]></system-out>
+  </testcase>
+  <testcase name="runScenario[&quot;&quot;, &quot;User go to the Checkout page and purchased the order&quot;](4)" classname="TestRunner.TestRunner" time="0.036">
+    <failure message="The step &apos;Enter valid &quot;standard_user&quot; and &quot;secret_sauce&quot;&apos; and 14 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@When(&quot;Enter valid {string} and {string}&quot;)&#10;public void enter_valid_and(String string, String string2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Click on login.&quot;)&#10;public void click_on_login() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User selcted t-shirt&quot;)&#10;public void user_selcted_t_shirt() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User selected bag&quot;)&#10;public void user_selected_bag() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;products sucessfully added into the cart&quot;)&#10;public void products_sucessfully_added_into_the_cart() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Given(&quot;user navigated to the cart page&quot;)&#10;public void user_navigated_to_the_cart_page() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User removed one of the Added Product&quot;)&#10;public void user_removed_one_of_the_added_product() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;Product was successfully removed&quot;)&#10;public void product_was_successfully_removed() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Given(&quot;Click on the Checkout button&quot;)&#10;public void click_on_the_checkout_button() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Given(&quot;User Navigated to the Checkout page&quot;)&#10;public void user_navigated_to_the_checkout_page() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User Enetered the following valid checkout information details&quot;)&#10;public void user_enetered_the_following_valid_checkout_information_details(io.cucumber.datatable.DataTable dataTable) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    // For automatic transformation, change DataTable to one of&#10;    // E, List&lt;E&gt;, List&lt;List&lt;E&gt;&gt;, List&lt;Map&lt;K,V&gt;&gt;, Map&lt;K,V&gt; or&#10;    // Map&lt;K, List&lt;V&gt;&gt;. E,K,V must be a String, Integer, Float,&#10;    // Double, Byte, Short, Long, BigInteger or BigDecimal.&#10;    //&#10;    // For other transformations you can register a DataTableType.&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User click on continue&quot;)&#10;public void user_click_on_continue() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;User verified the user details before payment&quot;)&#10;public void user_verified_the_user_details_before_payment() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;User clicked on FInish and Order placed successfully&quot;)&#10;public void user_clicked_on_f_inish_and_order_placed_successfully() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;User click on Back to home and navigated back to homepage&quot;)&#10;public void user_click_on_back_to_home_and_navigated_back_to_homepage() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.testng.UndefinedStepException"><![CDATA[io.cucumber.testng.UndefinedStepException: 
+The step 'Enter valid "standard_user" and "secret_sauce"' and 14 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("Enter valid {string} and {string}")
+public void enter_valid_and(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Click on login.")
+public void click_on_login() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User selcted t-shirt")
+public void user_selcted_t_shirt() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User selected bag")
+public void user_selected_bag() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("products sucessfully added into the cart")
+public void products_sucessfully_added_into_the_cart() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("user navigated to the cart page")
+public void user_navigated_to_the_cart_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User removed one of the Added Product")
+public void user_removed_one_of_the_added_product() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("Product was successfully removed")
+public void product_was_successfully_removed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("Click on the Checkout button")
+public void click_on_the_checkout_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User Navigated to the Checkout page")
+public void user_navigated_to_the_checkout_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User Enetered the following valid checkout information details")
+public void user_enetered_the_following_valid_checkout_information_details(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+@When("User click on continue")
+public void user_click_on_continue() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User verified the user details before payment")
+public void user_verified_the_user_details_before_payment() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User clicked on FInish and Order placed successfully")
+public void user_clicked_on_f_inish_and_order_placed_successfully() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("User click on Back to home and navigated back to homepage")
+public void user_click_on_back_to_home_and_navigated_back_to_homepage() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at ✽.Enter valid "standard_user" and "secret_sauce"(file:///C:/Users/skomaragiri/eclipse-workspace/saucedemo/src/test/java/Feature/TC004_Checkout_page_purchase_order.feature:5)
+]]></failure>
+    <system-out><![CDATA[
+@OrderPlaced
+Scenario:                                                             # src/test/java/Feature/TC004_Checkout_page_purchase_order.feature:14
+  When Enter valid "standard_user" and "secret_sauce"
+  Then Click on login.
+  When User selcted t-shirt
+  And User selected bag
+  Then products sucessfully added into the cart
+  Given user navigated to the cart page
+  When User removed one of the Added Product
+  Then Product was successfully removed
+  Given Click on the Checkout button
+  And User Navigated to the Checkout page
+  When User Enetered the following valid checkout information details
+    | First Name | Last Name | Zip code |
+    | Fisrt      | Last      | 30304    |
+  And User click on continue
+  And User verified the user details before payment
+  Then User clicked on FInish and Order placed successfully
+  And User click on Back to home and navigated back to homepage
+]]></system-out>
+  </testcase>
+  <testcase name="runloginfeature" classname="TestRunner.TestRunner" time="0.003"/>
+  <testcase name="runAddproduct" classname="TestRunner.TestRunner" time="0.0"/>
+</testsuite>

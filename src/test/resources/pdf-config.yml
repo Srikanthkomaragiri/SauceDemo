@@ -1,0 +1,8 @@
+document:
+  title: Cucumber Test Report
+  author: Automation Team
+  filename: ExtentReport.pdf
+  output-directory: target/ExtentReport
+  font:
+    path: "" # Leave empty to use default system font
+    size: 10

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="saucedemo Suite" verbose="1" >
+  <test name="Login and AddProduct Tests">
+    <classes>
+      <class name="Cucumberoptions.TC001_Login_TestRunner"/>
+      <class name="Cucumberoptions.TC002_Addproductsintocart_TestRunner"/>
+      <class name="Cucumberoptions.TC003_Cart_page_remove_product_TestRunner"/>
+      <class name="Cucumberoptions.TC004_Checkout_page_purchase_order_testrunner"/>
+    </classes>
+  </test>
+</suite>
+
