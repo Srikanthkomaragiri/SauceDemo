@@ -19,14 +19,16 @@ public class ExtentReportManager {
         }
 
         String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String reportPath = REPORT_BASE_DIR + featureName + "/ExtentReport_" + timestamp + ".PDF";
+        String reportPath = REPORT_BASE_DIR + featureName + "/ExtentReport_" + timestamp + ".html";
 
         File reportFile = new File(reportPath);
         reportFile.getParentFile().mkdirs();
 
         ExtentSparkReporter reporter = new ExtentSparkReporter(reportFile);
         ExtentReports extent = new ExtentReports();
+        //This tells extent how and where to generate the report.
         extent.attachReporter(reporter);
+        //System/Environment inside the reports
         extent.setSystemInfo("Feature", featureName);
         extent.setSystemInfo("Author", "Automation Team");
 

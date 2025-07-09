@@ -1,0 +1,4 @@
+11:13:22 INFO  Starting Scenario: Valid login with different credentials
+11:13:23 INFO  User launched the login page — Screenshot saved at: C:\Users\skomaragiri\eclipse-workspace\saucedemo/screenshots/TC001_Login/Valid_login_with_different_credentials/Screenshot_175203980309209-Jul-2025_11-13-22.png
+11:13:23 INFO  Entered valid username and password — Screenshot saved at: C:\Users\skomaragiri\eclipse-workspace\saucedemo/screenshots/TC001_Login/Valid_login_with_different_credentials/Screenshot_175203980336609-Jul-2025_11-13-23.png
+11:13:23 INFO  Clicked on login button — Screenshot saved at: C:\Users\skomaragiri\eclipse-workspace\saucedemo/screenshots/TC001_Login/Valid_login_with_different_credentials/Screenshot_175203980365009-Jul-2025_11-13-23.png
