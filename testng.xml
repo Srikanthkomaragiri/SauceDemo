@@ -7,7 +7,7 @@
       <class name="Cucumberoptions.TC001_Login_TestRunner"/>
       <class name="Cucumberoptions.TC002_Addproductsintocart_TestRunner"/>
       <class name="Cucumberoptions.TC003_Cart_page_remove_product_TestRunner"/>
-      <class name="Cucumberoptions.TC004_Checkout_page_purchase_order_testrunner"/>
+      <class name="Cucumberoptions.TC004_Checkout_page_purchase_order_TestRunner"/>
     </classes>
   </test>
 </suite>

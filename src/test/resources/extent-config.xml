@@ -1,9 +1,0 @@
-<extent>
-    <configuration>
-        <reportName>BDD Automation Report</reportName>
-        <documentTitle>Test Execution Report</documentTitle>
-        <theme>standard</theme>
-        <encoding>utf-8</encoding>
-        <protocol>https</protocol>
-    </configuration>
-</extent>

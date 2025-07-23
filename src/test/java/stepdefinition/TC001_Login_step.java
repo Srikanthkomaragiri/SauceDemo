@@ -22,7 +22,7 @@ public class TC001_Login_step {
         logger = LogManagerUtil.getLogger(featureName);
     }
 
-    // ✅ Screenshot + extent report logging
+    //  Screenshot + extent report logging
     private void captureScreenshotAndLog(String stepMessage) {
         String featureName = ScreenshotUtil.getFeatureName().replaceAll(" ", "_");
         String scenarioName = scenario.getName().replaceAll(" ", "_");
@@ -39,7 +39,7 @@ public class TC001_Login_step {
             hooks.getTest().warning("Could not attach screenshot: " + e.getMessage());
         }
 
-        // ✅ Log into Log4j
+        // Log into Log4j
         logger.info(stepMessage + " — Screenshot saved at: " + screenshotPath);
     }
 
@@ -51,9 +51,9 @@ public class TC001_Login_step {
     }
 
     @When("Enter valid {string} and {string}")
-    public void enter_valid_and(String username, String password) {
-        cs.POM.loginscreen().UserName(username);
-        cs.POM.lp.Password(password);
+    public void enter_valid_and(String string, String string2) {
+        cs.POM.loginscreen().UserName(string);
+        cs.POM.lp.Password(string2);
         captureScreenshotAndLog("Entered valid username and password");
     }
 

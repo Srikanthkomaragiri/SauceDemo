@@ -3,32 +3,11 @@
 <suite name="Failed suite [saucedemo Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Login and AddProduct Tests(failed)">
     <classes>
-      <class name="Cucumberoptions.TC004_Checkout_page_purchase_order_testrunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- Cucumberoptions.TC004_Checkout_page_purchase_order_testrunner -->
-      <class name="Cucumberoptions.TC003_Cart_page_remove_product_TestRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="tearDownClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- Cucumberoptions.TC003_Cart_page_remove_product_TestRunner -->
-      <class name="Cucumberoptions.TC002_Addproductsintocart_TestRunner">
-        <methods>
-          <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0"/>
-          <include name="tearDownClass"/>
-        </methods>
-      </class> <!-- Cucumberoptions.TC002_Addproductsintocart_TestRunner -->
       <class name="Cucumberoptions.TC001_Login_TestRunner">
         <methods>
           <include name="setUpClass"/>
-          <include name="tearDownClass"/>
           <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
         </methods>
       </class> <!-- Cucumberoptions.TC001_Login_TestRunner -->
     </classes>

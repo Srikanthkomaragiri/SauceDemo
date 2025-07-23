@@ -8,6 +8,9 @@ import java.util.HashMap;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
+import io.cucumber.java.Scenario;
+import stepdefinition.hooks;
+
 public class ExtentReportManager {
 
     private static HashMap<String, ExtentReports> reportMap = new HashMap<>();
@@ -35,4 +38,14 @@ public class ExtentReportManager {
         reportMap.put(featureName, extent);
         return extent;
     }
+
+  //Extent reports
+    public static String getFeatureName() {
+        String raw =hooks. scenario.getUri().toString(); // For Cucumber 7+//here by using scenario interface existing methods we 
+                                                  //can get the current running feature path.
+        return new File(raw).getName().replace(".feature", "");//receive the feature name without feature extension.
+    }
+  
+
+
 }

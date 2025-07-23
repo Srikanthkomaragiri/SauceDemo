@@ -6,8 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions
 (
 		
-		features = "src/test/java/Feature/TC002_Addproductsintocart.feature",
-		glue = "stepdefinition",
+		features = "src/test/java/feature/TC002_Addproductsintocart.feature",
+		glue = {"stepdefinition"},
 		monochrome = true,
 	   plugin = { "pretty",
 					    "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"

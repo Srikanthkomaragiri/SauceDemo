@@ -6,8 +6,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions
 (
 		
-	features = "src/test/java/Feature/TC003_Cart_page_remove_product.feature",
-	glue = "stepdefinition",
+	features = "src/test/java/feature/TC003_Cart_page_remove_product.feature",
+	glue = {"stepdefinition"},
 	monochrome = true,
 	tags  = "@CART_PAGE_REMOVE_PRODUCT",
 	  plugin = { "pretty",

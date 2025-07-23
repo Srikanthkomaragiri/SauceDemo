@@ -27,10 +27,10 @@ public class LogManagerUtil {
         try {
             String logFilePath = LOG_DIR + featureName + ".log";
             new File(LOG_DIR).mkdirs();
-
+//Gets the current Log4j configuration object — required to register new loggers.         
             LoggerContext ctx = (LoggerContext) LogManager.getContext(false);
             Configuration config = ctx.getConfiguration();
-
+//This defines how each log line should look:
             PatternLayout layout = PatternLayout.newBuilder()
                 .withPattern("%d{HH:mm:ss} %-5level %msg%n")
                 .build();
@@ -46,15 +46,21 @@ public class LogManagerUtil {
 
             appender.start();
             config.addAppender(appender);
+//Create a logger named "LoginFeature"
 
+//Send its output to "LoginFeatureAppender"
             AppenderRef ref = AppenderRef.createAppenderRef(featureName + "Appender", null, null);
             LoggerConfig loggerConfig = LoggerConfig.createLogger(false, org.apache.logging.log4j.Level.INFO,
                     featureName, "true", new AppenderRef[]{ref}, null, config, null);
+//Finally, fetches the logger instance and stores it in a map (loggerMap) so next time, you don’t recreate it.
+
 
             loggerConfig.addAppender(appender, null, null);
             config.addLogger(featureName, loggerConfig);
             ctx.updateLoggers();
 
+            
+         //This is a factory method from the Log4j2 API. It is used to get or create a logger instance.
             Logger logger = LogManager.getLogger(featureName);
             loggerMap.put(featureName, logger);
             return logger;

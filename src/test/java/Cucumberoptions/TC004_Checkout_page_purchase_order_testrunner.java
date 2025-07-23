@@ -5,8 +5,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions
 (
-	features = "src/test/java/Feature/TC004_Checkout_page_purchase_order.feature",
-	glue =  "stepdefinition",
+	features = "src/test/java/feature/TC004_Checkout_page_purchase_order.feature",
+	glue =  {"stepdefinition"},
 	monochrome = true,
 			plugin = { "pretty",
 				    "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
@@ -21,6 +21,6 @@ import io.cucumber.testng.CucumberOptions;
 
 
 
-public class TC004_Checkout_page_purchase_order_testrunner extends AbstractTestNGCucumberTests {
+public class TC004_Checkout_page_purchase_order_TestRunner extends AbstractTestNGCucumberTests {
 
 }

@@ -1,7 +1,7 @@
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Cucumberoptions\TC001_Login_TestRunner.java
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Cucumberoptions\TC002_Addproductsintocart_TestRunner.java
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Cucumberoptions\TC003_Cart_page_remove_product_TestRunner.java
-C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Cucumberoptions\TC004_Checkout_page_purchase_order_testrunner.java
+C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Cucumberoptions\TC004_Checkout_page_purchase_order_TestRunner.java
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Pom\pageobjectmanager.java
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Pom\TC001_Login_pages.java
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Pom\TC002_Addproductsintocart_page.java
@@ -14,5 +14,7 @@ C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\stepdefinition\TC
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\stepdefinition\TC004_Checkout_page_purchase_order_step.java
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\TestRunner\TestRunner.java
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Utils\contextsetup.java
+C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Utils\ExtentReportManager.java
+C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Utils\LogManagerUtil.java
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Utils\ScreenshotUtil.java
 C:\Users\skomaragiri\eclipse-workspace\saucedemo\src\test\java\Utils\TestBase.java

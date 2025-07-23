@@ -3,12 +3,14 @@ package stepdefinition;
 import java.io.File;
 
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.devtools.v135.page.model.Screenshot;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
 import Utils.ExtentReportManager;
 import Utils.LogManagerUtil;
+import Utils.ScreenshotUtil;
 import Utils.contextsetup;
 import io.cucumber.java.Before;
 import io.cucumber.java.After;
@@ -16,7 +18,7 @@ import io.cucumber.java.Scenario;
 
 public class hooks {
 
-    public static Scenario scenario; // 🔁 Make static to access across steps
+    public static Scenario scenario; // You're making the current scenario accessible everywhere in your framework, by storing it here: Make static to access across steps
     public contextsetup cs;
 
     
@@ -24,7 +26,7 @@ public class hooks {
    /* Purpose:
     	To store the report object for the current feature file — one report per feature.
 
-    	🔹 Why ThreadLocal?
+    	 Why ThreadLocal?
     	Because if two features are executed in parallel, they each need their own ExtentReports object — so the reports don’t conflict or overwrite.
    */
     public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
@@ -34,9 +36,18 @@ public class hooks {
         this.cs = cs;
     }
 
-    @Before
+    
+ /*------------------------------------
+  
+Scenario is an interface provided by Cucumber.
+When you use it as a parameter in a @Before or @After hook, 
+Cucumber will automatically pass the currently running scenario to that method.
+use it in utilities like screenshots, logs, reports ,etc.
+    
+----------------------------------------
+ */   @Before
     public void setScenario(Scenario sc) {
-        System.out.println("Before hook: Browser already launched.");
+        System.out.println("get the scenario interface injection here through DI");
         scenario = sc;
     }
 
@@ -46,9 +57,9 @@ public class hooks {
    // Extent reports code
     @Before
     //this is the entry point of the extent reports.
-    public void beforeScenario(Scenario scenario) {
+    public void Extentreportscreate(Scenario scenario) {
         //this calls next
-    	String featureName = getFeatureName(scenario);//here we passed object of the SCenarioimpl class
+    	String featureName = ScreenshotUtil.getFeatureName();//here we passed object of the SCenarioimpl class
        
     	
     	// is a class and will create the report in a specific path using the feature name.
@@ -74,20 +85,14 @@ public class hooks {
     public static ExtentTest getTest() {
         return extentTest.get();
     }
-//Extent reports
-    private String getFeatureName(Scenario scenario) {
-        String raw = scenario.getUri().toString(); // For Cucumber 7+//here by using scenario interface existing methods we 
-                                                  //can get the current running feature path.
-        return new File(raw).getName().replace(".feature", "");//receive the feature name without feature extension.
-    }
-  
+
     
     
     
     //log4j logs code
     @Before
-    public void beforeScenariolog4j(Scenario scenario) {
-        String featureName = getFeatureName(scenario); // your utility method
+    public void log4jreports(Scenario scenario) {
+        String featureName = ExtentReportManager.getFeatureName(); // your utility method
         Logger logger = LogManagerUtil.getLogger(featureName);
         scenario.log("Logger initialized for " + featureName);
         logger.info("Starting Scenario: " + scenario.getName());
