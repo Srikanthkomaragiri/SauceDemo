@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [saucedemo Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+  </listeners>
   <test thread-count="5" name="Login and AddProduct Tests(failed)">
     <classes>
       <class name="Cucumberoptions.TC001_Login_TestRunner">
         <methods>
           <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Cucumberoptions.TC001_Login_TestRunner -->
+      <class name="Cucumberoptions.TC004_Checkout_page_purchase_order_TestRunner">
+        <methods>
+          <include name="setUpClass"/>
           <include name="runScenario" invocation-numbers="0"/>
           <include name="tearDownClass"/>
         </methods>
-      </class> <!-- Cucumberoptions.TC001_Login_TestRunner -->
+      </class> <!-- Cucumberoptions.TC004_Checkout_page_purchase_order_TestRunner -->
+      <class name="Cucumberoptions.TC002_Addproductsintocart_TestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- Cucumberoptions.TC002_Addproductsintocart_TestRunner -->
+      <class name="Cucumberoptions.TC003_Cart_page_remove_product_TestRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Cucumberoptions.TC003_Cart_page_remove_product_TestRunner -->
     </classes>
   </test> <!-- Login and AddProduct Tests(failed) -->
 </suite> <!-- Failed suite [saucedemo Suite] -->

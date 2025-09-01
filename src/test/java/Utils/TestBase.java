@@ -12,9 +12,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import com.epam.healenium.SelfHealingDriver;
+
 public class TestBase {
 
     public WebDriver driver;
+   // public SelfHealingDriver driver;
 
     public WebDriver browserlaunch() throws IOException {
 
@@ -26,6 +29,7 @@ public class TestBase {
         String URL = prop.getProperty("url");
 
         if (driver == null) {
+        	
 
             String browserName = prop.getProperty("browser");
 
@@ -56,20 +60,32 @@ public class TestBase {
                 // Suppress "Chrome is being controlled by automated software"
                 options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
 
-                driver = new ChromeDriver(options);
+               //driver = new ChromeDriver(options);
+                
+                WebDriver delegate = new ChromeDriver(options); // regular driver
+                 driver = SelfHealingDriver.create(delegate); 
+                 driver.manage().deleteAllCookies();
+                 driver.manage().window().maximize();
+                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+                 driver.get(URL);
+            
             }
             else if (browserName.equalsIgnoreCase("firefox")) {
 
                 System.setProperty("webdriver.gecko.driver", "C:\\Users\\skomaragiri\\eclipse-workspace\\saucedemo\\drivers\\geckodriver.exe");
 
-                driver = new FirefoxDriver();
+                WebDriver delegate = new FirefoxDriver(); // regular driver
+                 driver = SelfHealingDriver.create(delegate); 
+            
+                 driver.manage().deleteAllCookies();
+                 driver.manage().window().maximize();
+                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+                 driver.get(URL);
+            
             }
         }
 
-        driver.manage().deleteAllCookies();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-        driver.get(URL);
+       
 
         return driver;
     }

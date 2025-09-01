@@ -2,6 +2,8 @@ package Utils;
 
 import org.apache.commons.io.FileUtils; // Utility class for file operations (copying files)
 import org.openqa.selenium.*; // For WebDriver and TakesScreenshot
+import org.openqa.selenium.remote.Augmenter;
+
 import io.cucumber.java.Scenario; // For accessing Cucumber scenario details
 import stepdefinition.hooks; // To access current scenario object
 
@@ -26,21 +28,33 @@ public class ScreenshotUtil {
 
         //  Take screenshot as file using Selenium
         //Takescreenshot is an interface using driver we implement the methods
-        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        
+        try {
+            // Unwrap proxy driver if needed
+            WebDriver unwrappedDriver = driver;
+            if (!(driver instanceof TakesScreenshot)) {
+                unwrappedDriver = new Augmenter().augment(driver);
+            }
+        
+        
+            File src = ((TakesScreenshot) unwrappedDriver).getScreenshotAs(OutputType.FILE);
         
         //  Build the full path for saving the screenshot
         String path = screenshotDir + "/" + "Screenshot_" + System.currentTimeMillis() + timestamp + ".png";
         
-        try {
+      
             //  Save the screenshot to the destination path
             FileUtils.copyFile(src, new File(path));
-        } catch (IOException e) {
+            
+            //  Return the final screenshot path
+            return path;
+    } catch (IOException e) {
             //  If saving fails, print the error
             e.printStackTrace();
+            return null;
         }
 
-        //  Return the final screenshot path
-        return path;
+       
     }
 
     //  Extract the current feature file name from the Scenario object

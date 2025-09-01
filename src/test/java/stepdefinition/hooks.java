@@ -3,112 +3,99 @@ package stepdefinition;
 import java.io.File;
 
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.devtools.v135.page.model.Screenshot;
+import org.openqa.selenium.WebDriver;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 
+import Utils.AllureAttachments;
 import Utils.ExtentReportManager;
 import Utils.LogManagerUtil;
 import Utils.ScreenshotUtil;
 import Utils.contextsetup;
-import io.cucumber.java.Before;
+
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 public class hooks {
 
-    public static Scenario scenario; // You're making the current scenario accessible everywhere in your framework, by storing it here: Make static to access across steps
+    public static Scenario scenario;
     public contextsetup cs;
 
-    
-    
-   /* Purpose:
-    	To store the report object for the current feature file — one report per feature.
-
-    	 Why ThreadLocal?
-    	Because if two features are executed in parallel, they each need their own ExtentReports object — so the reports don’t conflict or overwrite.
-   */
     public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
     public static ThreadLocal<ExtentReports> extentReport = new ThreadLocal<>();
-    
+    public static ThreadLocal<Logger> loggerThread = new ThreadLocal<>();
+
     public hooks(contextsetup cs) {
         this.cs = cs;
     }
 
-    
- /*------------------------------------
-  
-Scenario is an interface provided by Cucumber.
-When you use it as a parameter in a @Before or @After hook, 
-Cucumber will automatically pass the currently running scenario to that method.
-use it in utilities like screenshots, logs, reports ,etc.
-    
-----------------------------------------
- */   @Before
-    public void setScenario(Scenario sc) {
-        System.out.println("get the scenario interface injection here through DI");
+    // 🔷 Before Scenario — Set up logging, extent, and context
+    @Before(order = 1)
+    public void beforeScenario(Scenario sc) {
+        System.out.println("Scenario injection and setup");
         scenario = sc;
-    }
 
-   
-    
-    
-   // Extent reports code
-    @Before
-    //this is the entry point of the extent reports.
-    public void Extentreportscreate(Scenario scenario) {
-        //this calls next
-    	String featureName = ScreenshotUtil.getFeatureName();//here we passed object of the SCenarioimpl class
-       
-    	
-    	// is a class and will create the report in a specific path using the feature name.
-    	ExtentReports report = ExtentReportManager.getReporter(featureName);
-       
-    	
-    	
-    	//ExtentTest is used to log each scenario from the feature file into that report.
-    	//It doesn't “execute” the scenario — it just records what happens in it.
-    	ExtentTest test = report.createTest(scenario.getName());
+        String featureName = ScreenshotUtil.getFeatureName();
 
-        extentTest.set(test);
+        // Extent Report Setup
+        ExtentReports report = ExtentReportManager.getReporter(featureName);
+        ExtentTest test = report.createTest(scenario.getName());
         extentReport.set(report);
+        extentTest.set(test);
+
+        // Log4j Setup
+        Logger logger = LogManagerUtil.getLogger(featureName);
+        logger.info("===== Starting Scenario: " + scenario.getName() + " =====");
+        loggerThread.set(logger);
     }
 
-    @After
-    public void afterScenario() {
+    // 🔷 After Scenario — Attach screenshot on failure, flush extent
+    @After(order = 1)
+    public void afterScenario(Scenario scenario) {
+        if (scenario.isFailed() && cs.driver != null) {
+            AllureAttachments.attachScreenshot(cs.driver, "Failure - " + scenario.getName());
+            AllureAttachments.attachPageSource(cs.driver);
+            AllureAttachments.attachLogs("Scenario failed: " + scenario.getName());
+
+            Logger logger = loggerThread.get();
+            if (logger != null) {
+                logger.error("❌ Scenario FAILED: " + scenario.getName());
+            }
+        }
+
         if (extentReport.get() != null) {
             extentReport.get().flush();
         }
     }
-//extent reports
-    public static ExtentTest getTest() {
-        return extentTest.get();
+
+    // 🔷 After Every Step — Attach Allure screenshot + log
+    @AfterStep
+    public void afterEachStep(Scenario scenario) {
+        WebDriver driver = cs.driver;
+        if (driver != null) {
+            AllureAttachments.attachScreenshot(driver, scenario.getName());
+            AllureAttachments.attachLogs("Step completed in: " + scenario.getName());
+
+            Logger logger = loggerThread.get();
+            if (logger != null) {
+                logger.info("✅ Step completed in scenario: " + scenario.getName());
+            }
+        }
     }
 
-    
-    
-    
-    //log4j logs code
-    @Before
-    public void log4jreports(Scenario scenario) {
-        String featureName = ExtentReportManager.getFeatureName(); // your utility method
-        Logger logger = LogManagerUtil.getLogger(featureName);
-        scenario.log("Logger initialized for " + featureName);
-        logger.info("Starting Scenario: " + scenario.getName());
-
-        // Optional: Store logger in ThreadLocal if needed
-    
-
-    
-}
-    
-    
+    // 🔷 After All — Close browser
     @After
     public void teardown() {
         if (cs.driver != null) {
             cs.driver.quit();
-            System.out.println("Browser closed after feature.");
+            System.out.println("🧹 Browser closed.");
         }
+    }
+
+    public static ExtentTest getTest() {
+        return extentTest.get();
     }
 }

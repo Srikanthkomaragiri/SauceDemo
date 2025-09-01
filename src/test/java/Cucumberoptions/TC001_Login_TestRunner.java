@@ -2,17 +2,20 @@ package Cucumberoptions;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.Listeners;
+import io.qameta.allure.testng.AllureTestNg;
 
 @CucumberOptions(
-    features = "src/test/java/feature/TC001_Login.feature",
+    features = "classpath:feature/TC001_Login.feature", // ✅ correct path
     glue = {"stepdefinition"},
-    tags = "@LOGIN",
     monochrome = true,
-    plugin = {
-        "pretty"
-    }
+    tags = "@LOGIN",
+    		plugin = {
+    			    "pretty",
+    			    "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+    			    "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+    			}
 )
-public class TC001_Login_TestRunner extends AbstractTestNGCucumberTests {
-
-   
-}
+@Listeners({io.qameta.allure.testng.AllureTestNg.class})
+ // ✅ needed for TestNG integration
+public class TC001_Login_TestRunner extends AbstractTestNGCucumberTests {}

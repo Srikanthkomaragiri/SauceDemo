@@ -1,13 +1,22 @@
 package stepdefinition;
 
+import Utils.AllureAttachments;
 import Utils.LogManagerUtil;
 import Utils.ScreenshotUtil;
 import Utils.contextsetup;
 import io.cucumber.java.en.*;
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 import org.testng.Assert;
 import org.apache.logging.log4j.Logger;
 
 import static stepdefinition.hooks.scenario;
+
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class TC001_Login_step {
 
@@ -39,10 +48,17 @@ public class TC001_Login_step {
             hooks.getTest().warning("Could not attach screenshot: " + e.getMessage());
         }
 
-        // Log into Log4j
-        logger.info(stepMessage + " — Screenshot saved at: " + screenshotPath);
-    }
+        
+    } 
+    
+    
+ 
 
+    
+    
+    
+
+    
     @Given("Log in to the Website.")
     public void log_in_to_the_website() {
         System.out.println("------------Browser launched from stepdefinition.");
@@ -57,8 +73,11 @@ public class TC001_Login_step {
         captureScreenshotAndLog("Entered valid username and password");
     }
 
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("User clicks login button")
     @Then("Click on login.")
     public void click_on_login() {
+        Allure.step("Clicked login button");
         cs.POM.lp.Login();
         captureScreenshotAndLog("Clicked on login button");
     }
